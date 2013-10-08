@@ -17,7 +17,19 @@
 - (void)viewDidLoad
 {
     [super viewDidLoad];
-	// Do any additional setup after loading the view, typically from a nib.
+    
+    NSString *version = [[UIDevice currentDevice] systemVersion];
+    BOOL isAtLeast7 = [version floatValue] >= 7.0;
+    if (!isAtLeast7)
+        _WebView.frame = CGRectMake(_WebView.frame.origin.x,
+                                    _WebView.frame.origin.y - 20,
+                                    _WebView.frame.size.width,
+                                    _WebView.frame.size.height + 20);
+    
+    NSString *fullURL = @"http://thefinestartist.com";
+    NSURL *url = [NSURL URLWithString:fullURL];
+    NSURLRequest *requestObj = [NSURLRequest requestWithURL:url];
+    [_WebView loadRequest:requestObj];
 }
 
 - (void)didReceiveMemoryWarning

@@ -202,6 +202,9 @@
 				LastUpgradeCheck = 0500;
 				ORGANIZATIONNAME = TheFinestArtist;
 				TargetAttributes = {
+					D4FC352917FD90DC00C9823A = {
+						DevelopmentTeam = VF9M786PZ9;
+					};
 					D4FC354D17FD90DD00C9823A = {
 						TestTargetID = D4FC352917FD90DC00C9823A;
 					};
@@ -390,12 +393,18 @@
 		D4FC356017FD90DD00C9823A /* Debug */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TheFinestArtist/TheFinestArtist-Prefix.pch";
 				INFOPLIST_FILE = "TheFinestArtist/TheFinestArtist-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Debug;
@@ -403,12 +412,18 @@
 		D4FC356117FD90DD00C9823A /* Release */ = {
 			isa = XCBuildConfiguration;
 			buildSettings = {
+				ARCHS = "$(ARCHS_STANDARD)";
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				ASSETCATALOG_COMPILER_LAUNCHIMAGE_NAME = LaunchImage;
+				CODE_SIGN_IDENTITY = "iPhone Developer";
+				"CODE_SIGN_IDENTITY[sdk=iphoneos*]" = "iPhone Developer";
 				GCC_PRECOMPILE_PREFIX_HEADER = YES;
 				GCC_PREFIX_HEADER = "TheFinestArtist/TheFinestArtist-Prefix.pch";
 				INFOPLIST_FILE = "TheFinestArtist/TheFinestArtist-Info.plist";
+				IPHONEOS_DEPLOYMENT_TARGET = 6.0;
 				PRODUCT_NAME = "$(TARGET_NAME)";
+				PROVISIONING_PROFILE = "";
+				TARGETED_DEVICE_FAMILY = "1,2";
 				WRAPPER_EXTENSION = app;
 			};
 			name = Release;
@@ -474,6 +489,7 @@
 				D4FC356117FD90DD00C9823A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 		D4FC356217FD90DD00C9823A /* Build configuration list for PBXNativeTarget "TheFinestArtistTests" */ = {
 			isa = XCConfigurationList;
@@ -482,6 +498,7 @@
 				D4FC356417FD90DD00C9823A /* Release */,
 			);
 			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
 		};
 /* End XCConfigurationList section */
 	};
